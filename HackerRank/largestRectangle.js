@@ -1,12 +1,12 @@
-// command to run: node '.\LeetCode\taskXXXX_max_square_shopping centre.js'
+// command to run: node .\HackerRank\largestRectangle.js
 
-function getMaxSquareShoppingCentre(heights) {
+function largestRectangle(h) {
     let max = 0;
     let buildingsRow = 0;
 
     const stack = [];
 
-    heights.forEach(curHeight => {
+    h.forEach(curHeight => {
         while (isNotEmpty(stack) && pick(stack).height > curHeight) {
             const topStackElement = stack.pop();
             buildingsRow += topStackElement.row;
@@ -53,5 +53,5 @@ const testCases = [
 ];
 
 testCases.forEach(testCase => {
-    console.log('Buildings:', ...testCase, '-> Max square:', getMaxSquareShoppingCentre(testCase));
+    console.log('Buildings:', ...testCase, '-> Max square:', largestRectangle(testCase));
 });
