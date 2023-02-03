@@ -1,4 +1,5 @@
 // command to run: node .\HackerRank\largestRectangle.js
+// task: https://www.hackerrank.com/challenges/largest-rectangle/problem
 
 function largestRectangle(h) {
     let max = 0;
