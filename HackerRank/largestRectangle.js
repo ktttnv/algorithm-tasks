@@ -50,7 +50,7 @@ const testCases = [
     [1, 2, 3], // 4 when we take buildings with heights 2, 3
     [3, 7, 8, 18, 6, 7, 2], // 30 when we take buildings with heights 7, 8, 18, 6, 7
     [7, 6, 5, 4, 5, 6, 7, 1, 100], // 100 when we take one building with height 100
-    [7, 6, 5, 4, 5, 6, 7, 2], // 28 when we take buildings with height 7, 6, 5, 4, 5, 6, 7
+    [7, 6, 5, 4, 5, 6, 7, 2], // 28 when we take buildings with heights 7, 6, 5, 4, 5, 6, 7
 ];
 
 testCases.forEach(testCase => {
