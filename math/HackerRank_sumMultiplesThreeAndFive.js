@@ -1,7 +1,7 @@
 // https://www.hackerrank.com/contests/projecteuler/challenges/euler001/problem
 
 function sumConsecutiveNumbers(N) {
-    return BigInt(N) * (BigInt(N) + BigInt(1)) / BigInt(2);
+    return BigInt(N) * (BigInt(N) + 1n) / 2n;
 }
 
 function sumMultiplesThreeAndFive(N) {
@@ -11,9 +11,9 @@ function sumMultiplesThreeAndFive(N) {
     const multiplesFiveCount = BigInt(Math.floor(maxNum / 5));
     const multiplesFifteenCount = BigInt(Math.floor(maxNum / 15));
 
-    const sumMultiplesThree = sumConsecutiveNumbers(multiplesThreeCount) * BigInt(3);
-    const sumMultiplesFive = sumConsecutiveNumbers(multiplesFiveCount) * BigInt(5);
-    const sumMultiplesFifteen = sumConsecutiveNumbers(multiplesFifteenCount) * BigInt(15);
+    const sumMultiplesThree = sumConsecutiveNumbers(multiplesThreeCount) * 3n;
+    const sumMultiplesFive = sumConsecutiveNumbers(multiplesFiveCount) * 5n;
+    const sumMultiplesFifteen = sumConsecutiveNumbers(multiplesFifteenCount) * 15n;
 
     return String(sumMultiplesThree + sumMultiplesFive - sumMultiplesFifteen);
 }
