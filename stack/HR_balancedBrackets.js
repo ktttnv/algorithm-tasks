@@ -1,3 +1,4 @@
+// https://www.hackerrank.com/challenges/balanced-brackets/problem
 
 function isEmpty(arr) {
     return arr.length === 0;
