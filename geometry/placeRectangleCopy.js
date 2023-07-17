@@ -30,7 +30,7 @@ function findPlaceForRectangleCopy(allRects, rectIndToCopy, minValue = 1) {
       return {
         x: rectsInFindingArea[rectInd].x + rectsInFindingArea[rectInd].w + minValue,
         y: rectToCopy.y,
-        w: rectIndToCopy.w,
+        w: rectToCopy.w,
         h: rectToCopy.h,
       }
     }
@@ -40,7 +40,7 @@ function findPlaceForRectangleCopy(allRects, rectIndToCopy, minValue = 1) {
   return {
     x: rectsInFindingArea[rectsInFindingArea.length - 1].x + rectsInFindingArea[rectsInFindingArea.length - 1].w + minValue,
     y: rectToCopy.y,
-    w: rectIndToCopy.w,
+    w: rectToCopy.w,
     h: rectToCopy.h,
   }
 }
