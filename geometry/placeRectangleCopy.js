@@ -14,6 +14,16 @@ function findPlaceForRectangleCopy(allRects, rectIndToCopy, minValue = 1) {
     (rect.y <= rectToCopy.y + rectToCopy.h) // верхняя сторона прямоугольника rect НЕ ниже нижней стороны прямоугольника rectToCopy
   );
 
+  // Если нет прямоугольников в искомой области, то размещаем копию на расстоянии minValue от копируемого объекта
+  if (rectsInFindingArea.length === 0) {
+    return {
+      x: rectToCopy.x + rectToCopy.w + minValue,
+      y: rectToCopy.y,
+      w: rectToCopy.w,
+      h: rectToCopy.h,
+    }
+  }
+
   rectsInFindingArea.sort((rectOne, rectTwo) => {
     if (rectOne.x + rectOne.w > rectTwo.x + rectTwo.w) { // сортируем по увеличению координаты правой стороны
       return 1;
@@ -45,4 +55,4 @@ function findPlaceForRectangleCopy(allRects, rectIndToCopy, minValue = 1) {
   }
 }
 
-findPlaceForRectangleCopy(rects, 2, 2);
+console.log(findPlaceForRectangleCopy(rects, 2, 2));
